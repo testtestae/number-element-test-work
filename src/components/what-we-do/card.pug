@@ -1,0 +1,6 @@
+mixin card(title, text, imageLink, btnLink, textLink, name)
+    .card(class=`what-we-do__${name}`)
+        img.card__img(src=imageLink, alt='123')
+        h4.card__title= title 
+        p.card__text= text
+        a.card__link(href=btnLink)= `${textLink}\u00A0\u00A0\u00A0\u00A0→`

@@ -1,0 +1,201 @@
+@font-face
+  font-family: GalienBold
+  src: url("./fonts/GALIEN-BOLD.OTF") format("opentype")
+@font-face
+  font-family: GilroyRegular
+  src: url("./fonts/GILROY-REGULAR.TTF") format("truetype")
+@font-face
+  font-family: GilroySemiBold
+  src: url("./fonts/GILROY-SEMIBOLD.TTF") format("truetype")
+    
+body
+    margin: 0
+    color: #1F3F68
+    font-family: GilroyRegular
+    font-size: 1.5rem
+    .pre-bounding_container
+        display: flex
+        justify-content: center
+        align-items: center
+    .bounding_container
+        width: 100%
+        max-width: 940px
+        padding: 10vmin
+    button, a
+        font-family: GilroyRegular
+    button
+        color: white
+        background-color: #5A98D0
+        padding: 1rem 5rem
+        border: none
+        border-radius: .5rem
+    h1, h2
+        font-family: GalienBold
+        font-size: 5rem
+    h3, h4
+        font-family: GilroySemiBold
+    p
+        font-size: 1rem
+        opacity: 0.4
+    a
+        color: #5A98D0
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+    > *
+        box-sizing: border-box
+    section
+        min-height: 100vh
+        padding: 15vh 15vw
+        @media screen and (max-width: 1800px)
+            padding: 2vh 2vw
+        @media screen and (max-width: 450px)
+            padding: 1.5vh 1.5vw
+    .modal
+        display: none
+        position: fixed
+        // display: flex
+        align-items: center
+        justify-content: center
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-color: rgba(31, 63, 104, 0.8)
+        &__container
+            opacity: 1
+            box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2)
+            border-radius: .75rem
+            background-color: #fff
+            padding: 1rem
+            > h6
+                margin: 1rem 0
+            .form
+                max-width: 920px
+                width: 70vw
+                &__elem 
+                    margin: 1rem 0
+                    > label
+                        > p
+                            margin: 0
+                    > input
+                        width: calc(100% - 1rem)
+                        padding: .5rem
+                        border: 1px solid #356EAD
+                        border-radius: .75rem
+                    #message
+                        height: 3rem
+                &__submit
+                    display: flex
+                    justify-content: center
+
+    .hero
+        background: linear-gradient(0deg, rgba(152, 195, 232, 0.4) 8.84%, rgba(152, 195, 232, 0) 31.12%)
+        display: flex
+        justify-content: center
+        align-items: top
+        flex-wrap: wrap
+        > *
+            width: 50%
+            max-width: 600px
+            display: inline
+            box-sizing: content-box
+            @media screen and (max-width: 1000px) 
+                width: 100%
+        &__text 
+            > h1
+                @media screen and (max-width: 880px)
+                    font-size: 3rem
+                @media screen and (max-width: 420px)
+                    font-size: 2rem
+        &__illustration
+            width: calc(50% + 20vw)
+            max-height: 100vh
+            transform: translateY(3rem)
+    .what-we-do
+        box-sizing: content-box
+        @media screen and (max-width: 760px)
+            display: flex
+            flex-direction: column
+        @media screen and (min-width: 761px)
+            display: grid
+            gap: 2vw
+            grid-template-rows: 1rem repeat(6, 7.5rem)
+            grid-template-columns: repeat(2, 1fr)
+            grid-template-areas: "title ." "title card1" "card2 card1" "card2 card1" "card2 card1" "card2 card3" ". card3" ". card3"  
+        &__title
+            grid-area: title
+            margin-right: 1rem
+            margin-down: 1rem
+        &__card1
+            grid-area: card1
+        &__card2
+            grid-area: card2
+        &__card3
+            grid-area: card3
+        .card
+            display: grid
+            grid-template-rows: 8rem 8rem 8rem 3.5rem 1.25rem
+            align-items: center
+            justify-self: center
+            align-self: center
+            width: 70vw
+            max-width: 18rem
+            box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2)
+            border-radius: 10px
+            padding: 1em
+            @media screen and (max-width: 410px)
+                max-width:12rem
+            > *
+                margin: 0
+            > img
+                max-width: 100%   
+    .footer_area
+        background: #5A98D0
+        color: #fff
+        border-radius: 10vmin 0 0 0
+        .our_client
+            padding: 1vmin 0 0 5vmin
+            min-height: 10vmin
+            display: flex
+            flex-direction: column
+            &__info
+                display: flex
+            &__logos
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+                justify-self: center
+                align-self: center
+                text-align: center
+                padding: 3rem 1rem
+                @media screen and (max-width:740px)
+                    grid-template-columns: repeat(2, 1fr)
+            &__logos > * 
+                padding: 1em
+            &__logo1, &__logo2, &__logo3, &__logo5, &__logo6, &__logo7
+                border-right: 1px solid white
+            &__logo1, &__logo2, &__logo3, &__logo4
+                border-bottom: 1px solid white
+            &__logo2, &__logo6
+                @media screen and (max-width: 740px)
+                    border-right: none
+            &__logo5, &__logo6
+                @media screen and (max-width: 740px)
+                    border-bottom: 1px solid white
+            &__more_client
+                background-color: #4E87BB
+
+        .pre_footer    
+            background: #316099
+            border-radius: 0px 10vmin 0px 0px
+            margin-right: 3vmin
+            > *
+                padding: 1vmin 5vmin 0 0
+            .intersted_to_woek_with_our_team
+                display: flex
+                align-items: center
+                flex-wrap: nowrap
+                @media screen and (max-width: 600px)
+                    flex-wrap: wrap
+                &__btn
+                    margin-left: 13vw

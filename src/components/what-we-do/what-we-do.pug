@@ -1,0 +1,9 @@
+include ./card.pug
+
+//- - var cards =  [{title: 'Заголовок', text: 'Лорем', image: require(`../../images/card__Bring Technology.svg`), link: '123', textLink: 'Learn more'}]
+
+section.what-we-do
+    h3.what-we-do__title What we do to help our client grow in digital era
+    +card( 'Bring Technology To Your Comfrotable Home', "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",  `./img/card__Bring Technology.svg`, '123', 'Learn more', "card1")
+    +card( 'Make Your business To Be Better Famous In Internet', "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",  `./img/card__Make Your business.svg`, '123', 'Learn more', "card2")
+    +card( 'Make Your business To Be Better Famous In Internet', "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",  `./img/card__Build Your Digital Product.svg`, '123', 'Learn more', "card3")
